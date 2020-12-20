@@ -22,8 +22,8 @@
         <v-card-text class="text-center display-1 mb-3" v-show="show">
           {{this.type}} <p v-if="type == 'LISTENING'">TO</p>
         </v-card-text>
-        <v-card-text style="width: 100%" v-show="show">
-          <Roller class="max-width text-center display-3 roller" :transition="3" :charList=this.charList :text=this.name ></Roller>
+        <v-card-text v-show="show">
+          <Roller class="max-width text-center display-3 roller" style="width: 100%" :transition="3" :charList=this.charList :text=this.name ></Roller>
         </v-card-text>
         <v-card-text class="text-center display-1 mb-3" v-show="show">
           {{this.action}}
