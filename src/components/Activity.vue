@@ -94,6 +94,7 @@
         font-family: "Open Sans", sans-serif;
         font-size: 2em;
         margin: 20px;
+        width: auto;
     }
     .max-width {
         width: 100%;
