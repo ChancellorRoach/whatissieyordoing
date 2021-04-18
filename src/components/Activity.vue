@@ -69,10 +69,15 @@
 
       async loadSteam(){
         const response = await axios
-                .get('https://roachbot-296601.ue.r.appspot.com/users')
+                .get('https://roach-robot.herokuapp.com/users')
 
         const status = response.data.status[0];
-        this.name = status.name.toUpperCase()
+        if (status == undefined){
+          this.name = 'NOTHING'
+        }else {
+          this.name = status.name.toUpperCase()
+        }
+
         setTimeout(() => {
             this.type = status.type.toUpperCase()
             this.action = status.action.toUpperCase().replace(";",",")
